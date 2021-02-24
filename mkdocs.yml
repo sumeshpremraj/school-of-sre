@@ -72,6 +72,16 @@ nav:
     - Threat, Attacks & Defences: security/threats_attacks_defences.md
     - Writing Secure code: security/writing_secure_code.md
     - Conclusion: security/conclusion.md
+- Hindi:
+    - Data:
+        - Relational Databases:
+            - Intro: translations/hi/databases_sql/intro.md
+            - Concepts: translations/hi/databases_sql/concepts.md
+            - MySQL: translations/hi/databases_sql/mysql.md
+            - InnoDB: translations/hi/databases_sql/innodb.md
+            - Operational Concepts: translations/hi/databases_sql/operations.md
+            - Lab: translations/hi/databases_sql/lab.md
+            - Conclusion: translations/hi/databases_sql/conclusion.md
 - Contribute: CONTRIBUTING.md
 - Code of Conduct: CODE_OF_CONDUCT.md
 - SRE Community: sre_community.md
