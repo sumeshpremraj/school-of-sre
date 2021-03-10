@@ -1,0 +1,1597 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.4">
+    
+    
+      
+        <title>Concepts - School Of SRE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+   <script async defer data-domain="linkedin.github.io" src="https://tracking.eskratch.com/js/plausible.js"></script>
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="School Of SRE" class="md-header-nav__button md-logo" aria-label="School Of SRE">
+      
+  <img src="../../../../img/sos.png" alt="logo">
+
+    </a>
+    <!-- Button to open drawer -->
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            <a href="../../../.." title="School Of SRE" >
+              School Of SRE
+            </a>
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Concepts
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Fundamentals Series
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Fundamentals Series" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Fundamentals Series
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_1" type="checkbox" id="nav-2_1" >
+      
+      <label class="md-nav__link" for="nav-2_1">
+        Linux Basics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux Basics" data-md-level="2">
+        <label class="md-nav__title" for="nav-2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_basics/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_basics/command_line_basics/" class="md-nav__link">
+        Command Line Basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_basics/linux_server_administration/" class="md-nav__link">
+        Server Administration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_basics/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_2" type="checkbox" id="nav-2_2" >
+      
+      <label class="md-nav__link" for="nav-2_2">
+        Git
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="nav-2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../git/git-basics/" class="md-nav__link">
+        Git Basics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../git/branches/" class="md-nav__link">
+        Working With Branches
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../git/github-hooks/" class="md-nav__link">
+        Github and Hooks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../git/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_3" type="checkbox" id="nav-2_3" >
+      
+      <label class="md-nav__link" for="nav-2_3">
+        Linux Networking
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linux Networking" data-md-level="2">
+        <label class="md-nav__title" for="nav-2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux Networking
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/dns/" class="md-nav__link">
+        DNS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/udp/" class="md-nav__link">
+        UDP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/http/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/tcp/" class="md-nav__link">
+        TCP
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/ipr/" class="md-nav__link">
+        Routing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../linux_networking/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Python and Web
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python and Web" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Python and Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../python_web/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../python_web/python-concepts/" class="md-nav__link">
+        Some Python Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../python_web/python-web-flask/" class="md-nav__link">
+        Python, Web and Flask
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../python_web/url-shorten-app/" class="md-nav__link">
+        The URL Shortening App
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../python_web/sre-conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_1" type="checkbox" id="nav-4_1" >
+      
+      <label class="md-nav__link" for="nav-4_1">
+        Relational Databases
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Relational Databases" data-md-level="2">
+        <label class="md-nav__title" for="nav-4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Relational Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/concepts/" class="md-nav__link">
+        Key Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/mysql/" class="md-nav__link">
+        MySQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/innodb/" class="md-nav__link">
+        InnoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/operations/" class="md-nav__link">
+        Operational Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/lab/" class="md-nav__link">
+        Lab
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_sql/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_2" type="checkbox" id="nav-4_2" >
+      
+      <label class="md-nav__link" for="nav-4_2">
+        NoSQL
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="NoSQL" data-md-level="2">
+        <label class="md-nav__title" for="nav-4_2">
+          <span class="md-nav__icon md-icon"></span>
+          NoSQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_nosql/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_nosql/key_concepts/" class="md-nav__link">
+        Key Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../databases_nosql/further_reading/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_3" type="checkbox" id="nav-4_3" >
+      
+      <label class="md-nav__link" for="nav-4_3">
+        Big Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Big Data" data-md-level="2">
+        <label class="md-nav__title" for="nav-4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Big Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../big_data/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../big_data/evolution/" class="md-nav__link">
+        Evolution and Architecture of Hadoop
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../big_data/tasks/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Systems Design
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Systems Design" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Systems Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../systems_design/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../systems_design/scalability/" class="md-nav__link">
+        Scalability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../systems_design/availability/" class="md-nav__link">
+        Availability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../systems_design/fault-tolerance/" class="md-nav__link">
+        Fault Tolerance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../systems_design/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+      
+      <label class="md-nav__link" for="nav-6">
+        Metrics and Monitoring
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Metrics and Monitoring" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Metrics and Monitoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/command-line_tools/" class="md-nav__link">
+        Command-line Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/third-party_monitoring/" class="md-nav__link">
+        Third-party Monitoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/alerts/" class="md-nav__link">
+        Proactive Monitoring with Alerts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/best_practices/" class="md-nav__link">
+        Best Practices for Monitoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/observability/" class="md-nav__link">
+        Observability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../metrics_and_monitoring/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+      
+      <label class="md-nav__link" for="nav-7">
+        Security
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Security" data-md-level="1">
+        <label class="md-nav__title" for="nav-7">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/fundamentals/" class="md-nav__link">
+        Fundamentals of Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/network_security/" class="md-nav__link">
+        Network Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/threats_attacks_defences/" class="md-nav__link">
+        Threat, Attacks & Defences
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/writing_secure_code/" class="md-nav__link">
+        Writing Secure code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../security/conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      
+      <label class="md-nav__link" for="nav-8">
+        Hindi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hindi" data-md-level="1">
+        <label class="md-nav__title" for="nav-8">
+          <span class="md-nav__icon md-icon"></span>
+          Hindi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8_1" type="checkbox" id="nav-8_1" checked>
+      
+      <label class="md-nav__link" for="nav-8_1">
+        Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data" data-md-level="2">
+        <label class="md-nav__title" for="nav-8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8_1_1" type="checkbox" id="nav-8_1_1" checked>
+      
+      <label class="md-nav__link" for="nav-8_1_1">
+        Relational Databases
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Relational Databases" data-md-level="3">
+        <label class="md-nav__title" for="nav-8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Relational Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Concepts
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    लोकप्रिय डेटाबेस
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql/" class="md-nav__link">
+        MySQL
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../innodb/" class="md-nav__link">
+        InnoDB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/" class="md-nav__link">
+        Operational Concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        Lab
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
+        Conclusion
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../CONTRIBUTING/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../CODE_OF_CONDUCT/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sre_community/" class="md-nav__link">
+        SRE Community
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    लोकप्रिय डेटाबेस
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Concepts</h1>
+                
+                <ul>
+<li>
+<p>डेटा संग्रहण के लिए संबंधपरक DB का उपयोग किया जाता है। यहां तक कि डेटा स्टोर करने के लिए एक फ़ाइल का उपयोग किया जा सकता है, लेकिन रिलेशनल DBs को विशिष्ट लक्ष्यों के साथ डिज़ाइन किया गया है:</p>
+<ul>
+<li>दक्षता</li>
+<li>पहुंच और प्रबंधन में आसानी</li>
+<li>का आयोजन किया</li>
+<li>डेटा के बीच संबंधों को संभालना (तालिकाओं के रूप में दर्शाया गया है)</li>
+</ul>
+</li>
+<li>
+<p>लेन-देन: कार्य की एक इकाई जिसमें एक साथ निष्पादित कई कथन शामिल हो सकते हैं</p>
+</li>
+<li>
+<p>ACID गुण</p>
+<p>डीबी लेनदेन की डेटा अखंडता की गारंटी देने वाले गुणों का सेट</p>
+<ul>
+<li>परमाणु: प्रत्येक लेनदेन परमाणु है (पूरी तरह से सफल या विफल)</li>
+<li>संगति: लेन-देन केवल वैध स्थिति में होता है (जिसमें नियम, बाधाएं, ट्रिगर आदि शामिल होते हैं)</li>
+<li>अलगाव: प्रत्येक लेनदेन को एक समवर्ती प्रणाली के भीतर सुरक्षित रूप से दूसरों को स्वतंत्र रूप से निष्पादित किया जाता है</li>
+<li>स्थायित्व: किसी भी बाद में विफलताओं के कारण पूर्ण लेन-देन नष्ट नहीं होगा</li>
+</ul>
+<p>उपरोक्त गुणों को स्पष्ट करने के लिए कुछ उदाहरण लेते हैं।</p>
+<ul>
+<li>खाता A में &amp; 200 का संतुलन है और B में of 400 है। खाता ए to 100 को खाता बी में स्थानांतरित कर रहा है। इस लेनदेन में प्रेषक से कटौती और प्राप्तकर्ता के शेष में एक अतिरिक्त है। यदि पहला ऑपरेशन सफलतापूर्वक गुजरता है जबकि दूसरा विफल रहता है, तो A का संतुलन successfully 100 होगा जबकि B का। 500 के बजाय successfully 400 होगा। डीबी में <strong>एटमॉसिटी</strong> यह सुनिश्चित करती है कि यह आंशिक रूप से विफल लेनदेन वापस आ जाए।</li>
+<li>यदि ऊपर का दूसरा ऑपरेशन विफल हो जाता है, तो यह डीबी असंगत हो जाता है (ऑपरेशन से पहले और बाद में खातों के संतुलन का योग) नहीं है। <strong>संगति</strong> सुनिश्चित करती है कि ऐसा न हो।</li>
+<li>तीन ऑपरेशन हैं, एक ए के खाते के लिए ब्याज की गणना करने के लिए, दूसरा ए के खाते में जोड़ने के लिए, फिर isol 100 को बी से ए में स्थानांतरित करें बिना <strong>अलगाव की</strong> गारंटी के, इन 3 संचालन के समवर्ती निष्पादन से हर बार एक अलग परिणाम हो सकता है।</li>
+<li>लेन-देन डिस्क पर लिखे जाने से पहले सिस्टम क्रैश होने पर क्या होता है? <strong>स्थायित्व</strong> सुनिश्चित करता है कि रिकवरी के दौरान परिवर्तन सही तरीके से लागू हो।</li>
+</ul>
+</li>
+<li>
+<p>संबंधपरक डेटा</p>
+<ul>
+<li>टेबल्स संबंधों का प्रतिनिधित्व करते हैं</li>
+<li>कॉलम (फ़ील्ड) विशेषताओं का प्रतिनिधित्व करते हैं</li>
+<li>पंक्तियाँ व्यक्तिगत रिकॉर्ड हैं</li>
+<li>स्कीमा डीबी की संरचना का वर्णन करता है</li>
+</ul>
+</li>
+<li>
+<p>एसक्यूएल</p>
+<p>डेटा के साथ सहभागिता और प्रबंधन करने के लिए एक क्वेरी भाषा।</p>
+<p><a href="https://stackify.com/what-are-crud-operations/">CRUD संचालन</a> - क्वेरी बनाएँ, पढ़ें, अपडेट करें, हटाएं</p>
+<p>प्रबंधन संचालन - डीबी / टेबल / इंडेक्स आदि, बैकअप, आयात / निर्यात, उपयोगकर्ता, अभिगम नियंत्रण बनाएँ</p>
+<p>व्यायाम: नीचे दिए गए प्रश्नों को चार प्रकारों - डीडीएल (परिभाषा), डीएमएल (हेरफेर), डीसीएल (नियंत्रण) और टीसीएल (लेनदेन) में वर्गीकृत करें और विस्तार से बताएं।</p>
+<p><code>insert, create, drop, delete, update, commit, rollback, truncate, alter, grant, revoke</code></p>
+<p>आप <a href="https://linkedin.github.io/school-of-sre/databases_sql/lab/">लैब अनुभाग</a> में इनका अभ्यास कर सकते हैं।</p>
+</li>
+<li>
+<p>प्रतिबन्ध</p>
+<p>डेटा के लिए नियम जिन्हें संग्रहीत किया जा सकता है। यदि आप किसी तालिका में परिभाषित इनमें से किसी का भी उल्लंघन करते हैं तो क्वेरी विफल हो जाती है।</p>
+<p>प्राथमिक कुंजी: एक या एक से अधिक कॉलम जिसमें UNIQUE मान होते हैं, और NULL मान नहीं हो सकते। एक तालिका में केवल एक प्राथमिक कुंजी हो सकती है। इस पर एक इंडेक्स डिफ़ॉल्ट रूप से बनाया जाता है।</p>
+<p>विदेशी कुंजी: दो तालिकाओं को एक साथ जोड़ता है। इसका मान किसी भिन्न तालिका में एक प्राथमिक कुंजी से मेल खाता है
+ शून्य नहीं: शून्य मानों की अनुमति नहीं देता है
+ अद्वितीय: सभी पंक्तियों में स्तंभ का मान अद्वितीय होना चाहिए
+ डिफ़ॉल्ट: स्तंभ के लिए एक डिफ़ॉल्ट मान प्रदान करता है यदि सम्मिलित करने के दौरान कोई भी निर्दिष्ट नहीं किया गया है</p>
+<p>जाँच करें: केवल विशेष मानों को अनुमति देता है (जैसे शेष राशि = = 0)</p>
+</li>
+<li>
+<p><a href="https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/">इंडेक्स</a></p>
+<p>अधिकांश इंडेक्स बी + ट्री संरचना का उपयोग करते हैं।</p>
+<p>उनका उपयोग क्यों करें: प्रश्नों को गति दें (बड़े तालिकाओं में जो केवल कुछ पंक्तियों, न्यूनतम / अधिकतम प्रश्नों को प्राप्त करते हैं, विचार पंक्तियों को समाप्त करके)</p>
+<p>अनुक्रमित के प्रकार: अद्वितीय, प्राथमिक कुंजी, पूर्ण पाठ, माध्यमिक</p>
+<p>भारी-भरकम भार, ज्यादातर पूर्ण टेबल स्कैन या बड़ी संख्या में पंक्तियों आदि को एक्सेस करना इंडेक्स से लाभ नहीं होता है</p>
+</li>
+<li>
+<p><a href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-joins/">में शामिल</a></p>
+<p>आपको संबंधित डेटा को कई तालिकाओं से लाने की अनुमति देता है, उन्हें कुछ सामान्य फ़ील्ड के साथ जोड़ता है। शक्तिशाली, लेकिन संसाधन-गहन और स्केलिंग डेटाबेस को कठिन बनाता है। पैमाने पर चलने पर यह धीमी गति से प्रदर्शन करने वाले कई प्रश्नों का कारण है, और समाधान लगभग हमेशा जुड़ने के तरीके खोजने के लिए होता है।</p>
+</li>
+<li>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/access-control.html">अभिगम नियंत्रण</a></p>
+<p>DB के पास व्यवस्थापक कार्यों के लिए विशेषाधिकार खाते हैं, और ग्राहकों के लिए नियमित खाते हैं। इन खातों के लिए किन कार्यों (DDL, DML आदि पर पहले चर्चा की गई) पर नियंत्रण है।</p>
+<p>DB पहले उपयोगकर्ता क्रेडेंशियल्स (प्रमाणीकरण) की पुष्टि करता है, और फिर यह जांचता है कि क्या यह उपयोगकर्ता कुछ आंतरिक तालिकाओं में इन सूचनाओं को देखकर अनुरोध (प्राधिकरण) करने की अनुमति देता है।</p>
+<p>अन्य नियंत्रणों में एक्टिविटी ऑडिटिंग शामिल है जो किसी उपयोगकर्ता द्वारा किए गए कार्यों के इतिहास की जांच करने की अनुमति देता है, और संसाधन सीमाएं जो अनुमत प्रश्नों, कनेक्शनों आदि की संख्या को परिभाषित करती हैं।</p>
+</li>
+</ul>
+<h3 id="_1">लोकप्रिय डेटाबेस</h3>
+<p>वाणिज्यिक, बंद स्रोत - Oracle, Microsoft SQL सर्वर, IBM DB2</p>
+<p>वैकल्पिक भुगतान सहायता के साथ खुला स्रोत - MySQL, MariaDB, PostgreSQL</p>
+<p>व्यक्तिगत और छोटी कंपनियों ने हमेशा खुले स्रोत DB को तरजीह दी है क्योंकि वाणिज्यिक सॉफ्टवेयर से जुड़ी भारी लागत।</p>
+<p>हाल के दिनों में, यहां तक कि बड़े संगठन भी लचीलेपन और इसके साथ जुड़े लागत बचत के कारण स्रोत के विकल्प खोलने के लिए वाणिज्यिक सॉफ्टवेयर से दूर चले गए हैं।</p>
+<p>डेवलपर और तीसरे पक्ष से उपलब्ध समर्थन के कारण समर्थन की कमी अब चिंता का विषय नहीं है।</p>
+<p>MySQL सबसे व्यापक रूप से उपयोग किया जाने वाला ओपन सोर्स DB है, और इसे होस्टिंग प्रदाताओं द्वारा व्यापक रूप से समर्थन किया जाता है, जिससे किसी का भी उपयोग करना आसान हो जाता है। यह लोकप्रिय Linux-Apache-MySQL-PHP ( <a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a> ) स्टैक का हिस्सा है जो 2000 के दशक में लोकप्रिय हो गया। हमारे पास एक प्रोग्रामिंग भाषा के लिए कई और विकल्प हैं, लेकिन बाकी स्टैक अभी भी व्यापक रूप से उपयोग किया जाता है।</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../intro/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Intro
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../mysql/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              MySQL
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 LinkedIn Corporation. All Rights Reserved. Licensed under the Creative Commons Attribution 4.0 International Public License
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/linkedin/school-of-sre" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.9b151c6a.min.js"></script>
+      
+    
+  </body>
+</html>
