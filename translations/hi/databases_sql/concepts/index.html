@@ -10,18 +10,18 @@
       
       
       <link rel="shortcut icon" href="../../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>InnoDB - School Of SRE</title>
+        <title>Concepts - School Of SRE</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.77f3fd56.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
         
       
     
@@ -31,7 +31,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -95,7 +95,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              InnoDB
+              Concepts
             
           </span>
         </div>
@@ -103,7 +103,7 @@
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -112,10 +112,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -146,7 +146,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -194,6 +194,7 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+          
             
   
   
@@ -202,18 +203,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_1" type="checkbox" id="nav-2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
       
-      <label class="md-nav__link" for="nav-2_1">
+      <label class="md-nav__link" for="nav-2-1">
         Linux Basics
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Linux Basics" data-md-level="2">
-        <label class="md-nav__title" for="nav-2_1">
+        <label class="md-nav__title" for="nav-2-1">
           <span class="md-nav__icon md-icon"></span>
           Linux Basics
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -277,18 +279,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_2" type="checkbox" id="nav-2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
       
-      <label class="md-nav__link" for="nav-2_2">
+      <label class="md-nav__link" for="nav-2-2">
         Git
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Git" data-md-level="2">
-        <label class="md-nav__title" for="nav-2_2">
+        <label class="md-nav__title" for="nav-2-2">
           <span class="md-nav__icon md-icon"></span>
           Git
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -352,18 +355,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2_3" type="checkbox" id="nav-2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
       
-      <label class="md-nav__link" for="nav-2_3">
+      <label class="md-nav__link" for="nav-2-3">
         Linux Networking
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Linux Networking" data-md-level="2">
-        <label class="md-nav__title" for="nav-2_3">
+        <label class="md-nav__title" for="nav-2-3">
           <span class="md-nav__icon md-icon"></span>
           Linux Networking
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -485,6 +489,7 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+          
             
   
   
@@ -575,6 +580,7 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+          
             
   
   
@@ -583,18 +589,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_1" type="checkbox" id="nav-4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
       
-      <label class="md-nav__link" for="nav-4_1">
+      <label class="md-nav__link" for="nav-4-1">
         Relational Databases
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Relational Databases" data-md-level="2">
-        <label class="md-nav__title" for="nav-4_1">
+        <label class="md-nav__title" for="nav-4-1">
           <span class="md-nav__icon md-icon"></span>
           Relational Databases
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -694,18 +701,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_2" type="checkbox" id="nav-4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
       
-      <label class="md-nav__link" for="nav-4_2">
+      <label class="md-nav__link" for="nav-4-2">
         NoSQL
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="NoSQL" data-md-level="2">
-        <label class="md-nav__title" for="nav-4_2">
+        <label class="md-nav__title" for="nav-4-2">
           <span class="md-nav__icon md-icon"></span>
           NoSQL
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -757,18 +765,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4_3" type="checkbox" id="nav-4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
       
-      <label class="md-nav__link" for="nav-4_3">
+      <label class="md-nav__link" for="nav-4-3">
         Big Data
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Big Data" data-md-level="2">
-        <label class="md-nav__title" for="nav-4_3">
+        <label class="md-nav__title" for="nav-4-3">
           <span class="md-nav__icon md-icon"></span>
           Big Data
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -841,6 +850,7 @@
           Systems Design
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -931,6 +941,7 @@
           Metrics and Monitoring
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -1046,6 +1057,7 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+          
             
   
   
@@ -1150,28 +1162,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8_1" type="checkbox" id="nav-8_1" checked>
-      
-      <label class="md-nav__link" for="nav-8_1">
-        Data
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Data" data-md-level="2">
-        <label class="md-nav__title" for="nav-8_1">
-          <span class="md-nav__icon md-icon"></span>
-          Data
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -1183,18 +1173,43 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8_1_1" type="checkbox" id="nav-8_1_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" checked>
       
-      <label class="md-nav__link" for="nav-8_1_1">
+      <label class="md-nav__link" for="nav-8-1">
+        Data
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Data" data-md-level="2">
+        <label class="md-nav__title" for="nav-8-1">
+          <span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1-1" type="checkbox" id="nav-8-1-1" checked>
+      
+      <label class="md-nav__link" for="nav-8-1-1">
         Relational Databases
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Relational Databases" data-md-level="3">
-        <label class="md-nav__title" for="nav-8_1_1">
+        <label class="md-nav__title" for="nav-8-1-1">
           <span class="md-nav__icon md-icon"></span>
           Relational Databases
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -1211,11 +1226,45 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Concepts
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    लोकप्रिय डेटाबेस
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1235,59 +1284,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          InnoDB
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../innodb/" class="md-nav__link">
         InnoDB
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    आपको इसका उपयोग क्यों करना चाहिए?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    आर्किटेक्चर
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ज़रूरी भाग:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1399,7 +1400,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1411,25 +1412,11 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    आपको इसका उपयोग क्यों करना चाहिए?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    आर्किटेक्चर
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ज़रूरी भाग:
+    लोकप्रिय डेटाबेस
   </a>
   
 </li>
@@ -1442,47 +1429,96 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>InnoDB</h1>
+                  <h1>Concepts</h1>
                 
-                <h3 id="_1">आपको इसका उपयोग क्यों करना चाहिए?</h3>
-<p>सामान्य उद्देश्य, पंक्ति स्तर लॉकिंग, एसीआईडी समर्थन, लेनदेन, क्रैश रिकवरी और मल्टी-वर्जन कंसीडर कंट्रोल आदि।</p>
-<h3 id="_2">आर्किटेक्चर</h3>
-<p><img alt="alt_text" src="images/innodb_architecture.png" title="InnoDB घटक" /></p>
-<h3 id="_3">ज़रूरी भाग:</h3>
+                <ul>
+<li>
+<p>डेटा संग्रहण के लिए संबंधपरक DB का उपयोग किया जाता है। यहां तक कि डेटा स्टोर करने के लिए एक फ़ाइल का उपयोग किया जा सकता है, लेकिन रिलेशनल DBs को विशिष्ट लक्ष्यों के साथ डिज़ाइन किया गया है:</p>
 <ul>
-<li>
-<p>याद:</p>
-<ul>
-<li>
-<p>बफर पूल: अक्सर उपयोग किए जाने वाले डेटा (टेबल और इंडेक्स) के एलआरयू कैश को मेमोरी से सीधे संसाधित किया जाता है, जो प्रसंस्करण को गति देता है। ट्यूनिंग प्रदर्शन के लिए महत्वपूर्ण है।</p>
-</li>
-<li>
-<p>बफ़र बदलें: कैश द्वितीयक इंडेक्स पृष्ठों में तब परिवर्तित होता है जब वे पृष्ठ बफ़र पूल में नहीं होते हैं और जब वे लाए जाते हैं तो इसे विलय कर देते हैं। विलय करने में लंबा समय लग सकता है और लाइव प्रश्नों पर प्रभाव पड़ सकता है। यह बफर पूल का भी हिस्सा है। में अतिरिक्त I / O को पढ़ने के लिए सेकंडरी इंडेक्स से बचा जाता है।</p>
-</li>
-<li>
-<p>अडैप्टिव हैश इंडेक्स: सप्लीमेंट्स इनोहीडीबी के बी-ट्री इंडेक्स के साथ कैश की तरह फास्ट हैश लुकअप टेबल। मिसेस के लिए थोड़ा सा प्रदर्शन जुर्माना, इसे अपडेट करने के रखरखाव ओवरहेड भी जोड़ता है। हैश टक्कर बड़े DBs के लिए AHI पुनर्निर्माण का कारण बनती है।</p>
-</li>
-<li>
-<p>लॉग बफर: डिस्क को फ्लश से पहले लॉग डेटा को होल्ड करता है।</p>
-<p>प्रत्येक उपरोक्त मेमोरी का आकार विन्यास योग्य है, और प्रदर्शन को बहुत प्रभावित करता है। इष्टतम प्रदर्शन के लिए वर्कलोड, उपलब्ध संसाधनों, बेंचमार्किंग और ट्यूनिंग के सावधानीपूर्वक विश्लेषण की आवश्यकता होती है।</p>
-</li>
+<li>दक्षता</li>
+<li>पहुंच और प्रबंधन में आसानी</li>
+<li>का आयोजन किया</li>
+<li>डेटा के बीच संबंधों को संभालना (तालिकाओं के रूप में दर्शाया गया है)</li>
 </ul>
 </li>
 <li>
-<p>डिस्क:</p>
+<p>लेन-देन: कार्य की एक इकाई जिसमें एक साथ निष्पादित कई कथन शामिल हो सकते हैं</p>
+</li>
+<li>
+<p>ACID गुण</p>
+<p>डीबी लेनदेन की डेटा अखंडता की गारंटी देने वाले गुणों का सेट</p>
 <ul>
-<li>तालिकाएँ: पंक्तियों और स्तंभों के भीतर स्टोर डेटा।</li>
-<li>अनुक्रमित: जल्दी से विशिष्ट स्तंभ मान वाली पंक्तियों को खोजने में मदद करता है, पूर्ण तालिका स्कैन से बचा जाता है।</li>
-<li>Redo Logs: सभी लेन-देन उनके लिए लिखे गए हैं, और एक दुर्घटना के बाद, पुनर्प्राप्ति प्रक्रिया अपूर्ण लेनदेन द्वारा लिखे गए डेटा को सही करती है और किसी भी लंबित को फिर से दिखाती है।</li>
-<li>लॉग्स को पूर्ववत करें: एकल लेनदेन से जुड़े रिकॉर्ड जिसमें लेन-देन द्वारा नवीनतम परिवर्तन को पूर्ववत करने के बारे में जानकारी शामिल है।</li>
+<li>परमाणु: प्रत्येक लेनदेन परमाणु है (पूरी तरह से सफल या विफल)</li>
+<li>संगति: लेन-देन केवल वैध स्थिति में होता है (जिसमें नियम, बाधाएं, ट्रिगर आदि शामिल होते हैं)</li>
+<li>अलगाव: प्रत्येक लेनदेन को एक समवर्ती प्रणाली के भीतर सुरक्षित रूप से दूसरों को स्वतंत्र रूप से निष्पादित किया जाता है</li>
+<li>स्थायित्व: किसी भी बाद में विफलताओं के कारण पूर्ण लेन-देन नष्ट नहीं होगा</li>
+</ul>
+<p>उपरोक्त गुणों को स्पष्ट करने के लिए कुछ उदाहरण लेते हैं।</p>
+<ul>
+<li>खाता A में &amp; 200 का संतुलन है और B में of 400 है। खाता ए to 100 को खाता बी में स्थानांतरित कर रहा है। इस लेनदेन में प्रेषक से कटौती और प्राप्तकर्ता के शेष में एक अतिरिक्त है। यदि पहला ऑपरेशन सफलतापूर्वक गुजरता है जबकि दूसरा विफल रहता है, तो A का संतुलन successfully 100 होगा जबकि B का। 500 के बजाय successfully 400 होगा। डीबी में <strong>एटमॉसिटी</strong> यह सुनिश्चित करती है कि यह आंशिक रूप से विफल लेनदेन वापस आ जाए।</li>
+<li>यदि ऊपर का दूसरा ऑपरेशन विफल हो जाता है, तो यह डीबी असंगत हो जाता है (ऑपरेशन से पहले और बाद में खातों के संतुलन का योग) नहीं है। <strong>संगति</strong> सुनिश्चित करती है कि ऐसा न हो।</li>
+<li>तीन ऑपरेशन हैं, एक ए के खाते के लिए ब्याज की गणना करने के लिए, दूसरा ए के खाते में जोड़ने के लिए, फिर isol 100 को बी से ए में स्थानांतरित करें बिना <strong>अलगाव की</strong> गारंटी के, इन 3 संचालन के समवर्ती निष्पादन से हर बार एक अलग परिणाम हो सकता है।</li>
+<li>लेन-देन डिस्क पर लिखे जाने से पहले सिस्टम क्रैश होने पर क्या होता है? <strong>स्थायित्व</strong> सुनिश्चित करता है कि रिकवरी के दौरान परिवर्तन सही तरीके से लागू हो।</li>
 </ul>
 </li>
+<li>
+<p>संबंधपरक डेटा</p>
+<ul>
+<li>टेबल्स संबंधों का प्रतिनिधित्व करते हैं</li>
+<li>कॉलम (फ़ील्ड) विशेषताओं का प्रतिनिधित्व करते हैं</li>
+<li>पंक्तियाँ व्यक्तिगत रिकॉर्ड हैं</li>
+<li>स्कीमा डीबी की संरचना का वर्णन करता है</li>
 </ul>
+</li>
+<li>
+<p>एसक्यूएल</p>
+<p>डेटा के साथ सहभागिता और प्रबंधन करने के लिए एक क्वेरी भाषा।</p>
+<p><a href="https://stackify.com/what-are-crud-operations/">CRUD संचालन</a> - क्वेरी बनाएँ, पढ़ें, अपडेट करें, हटाएं</p>
+<p>प्रबंधन संचालन - डीबी / टेबल / इंडेक्स आदि, बैकअप, आयात / निर्यात, उपयोगकर्ता, अभिगम नियंत्रण बनाएँ</p>
+<p>व्यायाम: नीचे दिए गए प्रश्नों को चार प्रकारों - डीडीएल (परिभाषा), डीएमएल (हेरफेर), डीसीएल (नियंत्रण) और टीसीएल (लेनदेन) में वर्गीकृत करें और विस्तार से बताएं।</p>
+<p><code>insert, create, drop, delete, update, commit, rollback, truncate, alter, grant, revoke</code></p>
+<p>आप <a href="https://linkedin.github.io/school-of-sre/databases_sql/lab/">लैब अनुभाग</a> में इनका अभ्यास कर सकते हैं।</p>
+</li>
+<li>
+<p>प्रतिबन्ध</p>
+<p>डेटा के लिए नियम जिन्हें संग्रहीत किया जा सकता है। यदि आप किसी तालिका में परिभाषित इनमें से किसी का भी उल्लंघन करते हैं तो क्वेरी विफल हो जाती है।</p>
+<p>प्राथमिक कुंजी: एक या एक से अधिक कॉलम जिसमें UNIQUE मान होते हैं, और NULL मान नहीं हो सकते। एक तालिका में केवल एक प्राथमिक कुंजी हो सकती है। इस पर एक इंडेक्स डिफ़ॉल्ट रूप से बनाया जाता है।</p>
+<p>विदेशी कुंजी: दो तालिकाओं को एक साथ जोड़ता है। इसका मान किसी भिन्न तालिका में एक प्राथमिक कुंजी से मेल खाता है
+ शून्य नहीं: शून्य मानों की अनुमति नहीं देता है
+ अद्वितीय: सभी पंक्तियों में स्तंभ का मान अद्वितीय होना चाहिए
+ डिफ़ॉल्ट: स्तंभ के लिए एक डिफ़ॉल्ट मान प्रदान करता है यदि सम्मिलित करने के दौरान कोई भी निर्दिष्ट नहीं किया गया है</p>
+<p>जाँच करें: केवल विशेष मानों को अनुमति देता है (जैसे शेष राशि = = 0)</p>
+</li>
+<li>
+<p><a href="https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/">इंडेक्स</a></p>
+<p>अधिकांश इंडेक्स बी + ट्री संरचना का उपयोग करते हैं।</p>
+<p>उनका उपयोग क्यों करें: प्रश्नों को गति दें (बड़े तालिकाओं में जो केवल कुछ पंक्तियों, न्यूनतम / अधिकतम प्रश्नों को प्राप्त करते हैं, विचार पंक्तियों को समाप्त करके)</p>
+<p>अनुक्रमित के प्रकार: अद्वितीय, प्राथमिक कुंजी, पूर्ण पाठ, माध्यमिक</p>
+<p>भारी-भरकम भार, ज्यादातर पूर्ण टेबल स्कैन या बड़ी संख्या में पंक्तियों आदि को एक्सेस करना इंडेक्स से लाभ नहीं होता है</p>
+</li>
+<li>
+<p><a href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-joins/">में शामिल</a></p>
+<p>आपको संबंधित डेटा को कई तालिकाओं से लाने की अनुमति देता है, उन्हें कुछ सामान्य फ़ील्ड के साथ जोड़ता है। शक्तिशाली, लेकिन संसाधन-गहन और स्केलिंग डेटाबेस को कठिन बनाता है। पैमाने पर चलने पर यह धीमी गति से प्रदर्शन करने वाले कई प्रश्नों का कारण है, और समाधान लगभग हमेशा जुड़ने के तरीके खोजने के लिए होता है।</p>
+</li>
+<li>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/access-control.html">अभिगम नियंत्रण</a></p>
+<p>DB के पास व्यवस्थापक कार्यों के लिए विशेषाधिकार खाते हैं, और ग्राहकों के लिए नियमित खाते हैं। इन खातों के लिए किन कार्यों (DDL, DML आदि पर पहले चर्चा की गई) पर नियंत्रण है।</p>
+<p>DB पहले उपयोगकर्ता क्रेडेंशियल्स (प्रमाणीकरण) की पुष्टि करता है, और फिर यह जांचता है कि क्या यह उपयोगकर्ता कुछ आंतरिक तालिकाओं में इन सूचनाओं को देखकर अनुरोध (प्राधिकरण) करने की अनुमति देता है।</p>
+<p>अन्य नियंत्रणों में एक्टिविटी ऑडिटिंग शामिल है जो किसी उपयोगकर्ता द्वारा किए गए कार्यों के इतिहास की जांच करने की अनुमति देता है, और संसाधन सीमाएं जो अनुमत प्रश्नों, कनेक्शनों आदि की संख्या को परिभाषित करती हैं।</p>
+</li>
+</ul>
+<h3 id="_1">लोकप्रिय डेटाबेस</h3>
+<p>वाणिज्यिक, बंद स्रोत - Oracle, Microsoft SQL सर्वर, IBM DB2</p>
+<p>वैकल्पिक भुगतान सहायता के साथ खुला स्रोत - MySQL, MariaDB, PostgreSQL</p>
+<p>व्यक्तिगत और छोटी कंपनियों ने हमेशा खुले स्रोत DB को तरजीह दी है क्योंकि वाणिज्यिक सॉफ्टवेयर से जुड़ी भारी लागत।</p>
+<p>हाल के दिनों में, यहां तक कि बड़े संगठन भी लचीलेपन और इसके साथ जुड़े लागत बचत के कारण स्रोत के विकल्प खोलने के लिए वाणिज्यिक सॉफ्टवेयर से दूर चले गए हैं।</p>
+<p>डेवलपर और तीसरे पक्ष से उपलब्ध समर्थन के कारण समर्थन की कमी अब चिंता का विषय नहीं है।</p>
+<p>MySQL सबसे व्यापक रूप से उपयोग किया जाने वाला ओपन सोर्स DB है, और इसे होस्टिंग प्रदाताओं द्वारा व्यापक रूप से समर्थन किया जाता है, जिससे किसी का भी उपयोग करना आसान हो जाता है। यह लोकप्रिय Linux-Apache-MySQL-PHP ( <a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a> ) स्टैक का हिस्सा है जो 2000 के दशक में लोकप्रिय हो गया। हमारे पास एक प्रोग्रामिंग भाषा के लिए कई और विकल्प हैं, लेकिन बाकी स्टैक अभी भी व्यापक रूप से उपयोग किया जाता है।</p>
                 
               
               
@@ -1498,38 +1534,40 @@
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../mysql/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              MySQL
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../intro/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-        <a href="../operations/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Operational Concepts
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intro
+              </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+          </a>
+        
+        
+          <a href="../mysql/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                MySQL
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1563,13 +1601,19 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-    
-      <script src="../../../../assets/javascripts/bundle.9b151c6a.min.js"></script>
+      <script src="../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
